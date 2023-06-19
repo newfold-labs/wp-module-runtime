@@ -33,7 +33,7 @@ class Runtime {
 		add_action( 'load-toplevel_page_' . $container->plugin()->id, array( $this, 'register_runtime' ) );
 	}
 
-	public function prepareData() {
+	public function prepareRuntime() {
 		$sdk = apply_filters( 'newfold-runtime', array() );
 		return array(
 			'site'           => array( 
@@ -52,13 +52,13 @@ class Runtime {
 	public function register_runtime() {
 		\wp_register_script(
 			'nfd-runtime',
-			$this->container->plugin()->url . 'vendor/newfold-labs/wp-module-ecommerce/includes/runtime.js',
-			array('wp-url'),
+			$this->container->plugin()->url . 'vendor/newfold-labs/wp-module-runtime/includes/runtime.js',
+			array( 'wp-url' ),
 			'1.0.0'
 		);
 		\wp_add_inline_script(
 			'nfd-runtime',
-			'window.NewfoldRuntime =' . wp_json_encode( $this->prepareData( $this->container ) ) . ';',
+			'window.NewfoldRuntime =' . wp_json_encode( $this->prepareRuntime( $this->container ) ) . ';',
 			'before'
 		);
 		\wp_enqueue_script( 'nfd-runtime' );
