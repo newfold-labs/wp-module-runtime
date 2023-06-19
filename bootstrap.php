@@ -12,7 +12,7 @@ if ( function_exists( 'add_action' ) ) {
 		function () {
 			register(
 				array(
-					'name'     => 'ecommerce',
+					'name'     => 'runtime',
 					'label'    => __( 'Runtime', 'wp-module-runtime' ),
 					'callback' => function ( Container $container ) {
 						new Runtime( $container );
