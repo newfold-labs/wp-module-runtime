@@ -34,13 +34,15 @@ class Runtime {
 	}
 
 	public function prepareRuntime() {
-		$sdk = apply_filters( 'newfold-runtime', array() );
+		global $wp_version;
+		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) );
 		return array(
 			'site'           => array( 
 				'url' => \get_site_url(),
+				'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 			),
 			'admin_url'      => \admin_url(),
-			'rest_url'       => \get_home_url() . '/index.php',
+			'base_url'       => \get_home_url() . '/index.php',
 			'capabilities'   => $this->container->get('capabilities')->all(),
 			'sdk'            => $sdk
 		);
