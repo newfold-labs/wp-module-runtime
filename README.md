@@ -9,6 +9,20 @@ Runtime for Newfold WP modules and plugins
 
 ## Installation
 
+### 1. Setup GitHub registry
+
+Follow instructions at [GH Packages Setup](https://gist.github.com/aulisius/1a6e4961f17039d82275a6941331b021).
+
+### 2. Install the `@newfold-labs/wp-module-runtime` npm package.
+
+```bash
+npm install @newfold-labs/wp-module-runtime
+```
+
+## PHP Module
+
+The PHP module can be installed only on the Brand plugin.
+
 ### 1. Add the Newfold Satis to your `composer.json`.
 
  ```bash
@@ -21,11 +35,6 @@ Runtime for Newfold WP modules and plugins
  composer require newfold-labs/wp-module-runtime
  ```
 
-### 3. Install the `@newfold-labs/wp-module-runtime` npm package.
-
- ```bash
- npm install @newfold-labs/wp-module-runtime#v1.0.0
- ```
 
 ## Usage
 
@@ -36,7 +45,7 @@ import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 
 function Component(props) {
   if (NewfoldRuntime.hasCapability("hasYithExtended")) {
-    // 
+    //
   }
 }
 ```
