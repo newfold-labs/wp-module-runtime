@@ -1,2 +1,5 @@
-//The actual JS is bundled with the Bluehost Plugin
-console.log("Loaded NewFold Runtime", window.NewfoldRuntime);
+if (typeof window.NewfoldRuntime !== "undefined") {
+  console.log("Loaded NewFold Runtime");
+} else {
+  console.log("Error Loading NewFold Runtime");
+}
