@@ -25,16 +25,15 @@ The PHP module can be installed only on the Brand plugin.
 
 ### 1. Add the Newfold Satis to your `composer.json`.
 
- ```bash
- composer config repositories.newfold composer https://newfold.github.io/satis
- ```
+```bash
+composer config repositories.newfold composer https://newfold.github.io/satis
+```
 
 ### 2. Require the `newfold-labs/wp-module-runtime` package.
 
- ```bash
- composer require newfold-labs/wp-module-runtime
- ```
-
+```bash
+composer require newfold-labs/wp-module-runtime
+```
 
 ## Usage
 
@@ -49,5 +48,37 @@ function Component(props) {
   }
 }
 ```
+
+## Advanced Usage
+
+### Adding custom values
+
+While the default runtime has useful values, you can extend the runtime and add newer values under `NewfoldRuntime.sdk`. This is done via use of WP filter.
+
+__An example usage__
+
+```php
+add_filter( 'newfold-runtime', array( $this, 'add_to_runtime' ) );
+
+public function add_to_runtime( $sdk ) {
+  return array_merge( $sdk, array( 'my_field' => 'custom value' ) );
+}
+```
+
+Now when you use `NewfoldRuntime.sdk.my_field`, you'll see the value as `'custom value'`;
+
+### Type definition for `NewfoldRuntime.sdk`
+
+As the runtime can be extended via the `newfold-runtime` filter, you can also configure the type definitions to make sure you safely access the extended values. Since `sdk` is an TS interface, it can be easily extended in the following manner.
+
+```ts
+declare module "@newfold-labs/wp-module-runtime" {
+  export interface DefaultSdk {
+    my_field: string;
+  }
+}
+```
+
+Now when you use `NewfoldRuntime.sdk`, your editor should give you the correct type hints.
 
 [More on NewFold WordPress Modules](https://github.com/newfold-labs/wp-module-loader)
