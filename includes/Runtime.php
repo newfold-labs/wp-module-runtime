@@ -30,7 +30,10 @@ class Runtime {
 	 */
 	public function __construct( Container $container ) {
 		$this->container = $container;
-		add_action( 'load-toplevel_page_' . $container->plugin()->id, array( $this, 'register_runtime' ) );
+	}
+
+	public function loadIntoPage( $page ) {
+		add_action( $page, array( $this, 'register_runtime' ) );
 	}
 
 	public function prepareRuntime() {

@@ -15,7 +15,8 @@ if ( function_exists( 'add_action' ) ) {
 					'name'     => 'runtime',
 					'label'    => __( 'Runtime', 'wp-module-runtime' ),
 					'callback' => function ( Container $container ) {
-						new Runtime( $container );
+						$runtime = new Runtime( $container );
+						$runtime->loadIntoPage( 'load-toplevel_page_' . $container->plugin()->id );
 					},
 					'isActive' => true,
 					'isHidden' => true,
