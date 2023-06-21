@@ -40,14 +40,14 @@ class Runtime {
 		global $wp_version;
 		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) );
 		return array(
-			'site'           => array( 
-				'url' => \get_site_url(),
+			'site'         => array(
+				'url'   => \get_site_url(),
 				'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 			),
-			'admin_url'      => \admin_url(),
-			'base_url'       => \get_home_url() . '/index.php',
-			'capabilities'   => $this->container->get('capabilities')->all(),
-			'sdk'            => $sdk
+			'admin_url'    => \admin_url(),
+			'base_url'     => \get_home_url() . '/index.php',
+			'capabilities' => $this->container->get( 'capabilities' )->all(),
+			'sdk'          => $sdk,
 		);
 	}
 
