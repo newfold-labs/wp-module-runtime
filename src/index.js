@@ -15,7 +15,7 @@ export const NewfoldRuntime = {
     });
   },
   get siteDetails() {
-    return window.NewfoldRuntime?.siteDetails;
+    return window.NewfoldRuntime?.site;
   },
   get sdk() {
     return window.NewfoldRuntime?.sdk;
