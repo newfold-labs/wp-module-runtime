@@ -55,18 +55,11 @@ class Runtime {
 	 * Load Runtime into the page.
 	 */
 	public function register_runtime() {
-		\wp_register_script(
-			'nfd-runtime',
-			$this->container->plugin()->url . 'vendor/newfold-labs/wp-module-runtime/includes/runtime.js',
-			array( 'wp-url' ),
-			'1.0.0'
-		);
 		\wp_add_inline_script(
-			'nfd-runtime',
+			$this->container->plugin()->id . '-script',
 			'window.NewfoldRuntime =' . wp_json_encode( $this->prepareRuntime( $this->container ) ) . ';',
 			'before'
 		);
-		\wp_enqueue_script( 'nfd-runtime' );
 	}
 
 }

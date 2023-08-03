@@ -16,7 +16,7 @@ if ( function_exists( 'add_action' ) ) {
 					'label'    => __( 'Runtime', 'wp-module-runtime' ),
 					'callback' => function ( Container $container ) {
 						$runtime = new Runtime( $container );
-						$runtime->loadIntoPage( 'load-toplevel_page_' . $container->plugin()->id );
+						$runtime->loadIntoPage( 'admin_enqueue_scripts' );
 					},
 					'isActive' => true,
 					'isHidden' => true,
