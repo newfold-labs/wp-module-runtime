@@ -47,7 +47,7 @@ class Runtime {
 			'admin_url'    => \admin_url(),
 			'adminUrl'		=> \admin_url(),
 			'base_url'     => \get_home_url() . '/index.php',
-			'homeUrl'     => \get_home_url() . '/index.php',
+			'homeUrl'     => \get_home_url(),
 			'capabilities' => $this->container->get( 'capabilities' )->all(),
 			'sdk'          => $sdk,
 			'siteUrl'		=> \get_site_url(),
