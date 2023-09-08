@@ -45,9 +45,16 @@ class Runtime {
 				'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 			),
 			'admin_url'    => \admin_url(),
+			'adminUrl'		=> \admin_url(),
 			'base_url'     => \get_home_url() . '/index.php',
+			'homeUrl'     => \get_home_url(),
 			'capabilities' => $this->container->get( 'capabilities' )->all(),
-			'sdk'          => $sdk,
+			'sdk'          => $sdk, // kept for backward compatability, will be removed later
+			'siteUrl'		=> \get_site_url(),
+			'siteTitle' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
+			'restUrl' 	=> \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
+			'restNonce'			=> wp_create_nonce('wp-rest'),
+			...$sdk
 		);
 	}
 
