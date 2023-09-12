@@ -40,7 +40,7 @@ class Runtime {
 		global $wp_version;
 		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) );
 		
-		$sdkProps = apply_filters( 'newfold_runtime', array( 'wpversion11' => $wp_version ) );
+		$sdkProps = apply_filters( 'newfold_runtime', array( 'wpversion' => $wp_version ) );
 		return array(
 			'site'         => array(
 				'url'   => \get_site_url(),
