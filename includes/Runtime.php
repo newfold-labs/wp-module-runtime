@@ -39,6 +39,8 @@ class Runtime {
 	public function prepareRuntime() {
 		global $wp_version;
 		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) );
+		
+		$sdkProps = apply_filters( 'newfold_runtime', array( 'wpversion11' => $wp_version ) );
 		return array(
 			'site'         => array(
 				'url'   => \get_site_url(),
@@ -55,7 +57,8 @@ class Runtime {
 			'restUrl' 	=> \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
 			'restNonce'			=> wp_create_nonce('wp-rest'),
 			'isWoocommerceActive' 	=> is_plugin_active('woocommerce/woocommerce.php'),
-			...$sdk
+			...$sdk,
+			...$sdkProps
 		);
 	}
 
