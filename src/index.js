@@ -20,4 +20,19 @@ export const NewfoldRuntime = {
   get sdk() {
     return window.NewfoldRuntime?.sdk;
   },
+  get isWoo() {
+    return window.NewfoldRuntime?.isWoocommerceActive;
+  },
+  get ecommerce() {
+    return window.NewfoldRuntime?.ecommerce;
+  },
+  get plugin() {
+    return window.NewfoldRuntime?.plugin;
+  },
+  get wpversion() {
+    return window.NewfoldRuntime?.wpversion;
+  },
+  get siteTitle(){
+    return window.NewfoldRuntime?.siteTitle;
+  }
 };
