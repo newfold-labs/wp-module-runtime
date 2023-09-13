@@ -41,7 +41,7 @@ class Runtime {
 		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) ); // kept for backward compatability, will be removed later
 		return apply_filters(
 			'newfold_runtime', 
-			array(
+			array_merge(array(
 				'site'                => array(
 					'url'   => \get_site_url(),
 					'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
@@ -58,7 +58,7 @@ class Runtime {
 				'restNonce'           => wp_create_nonce('wp-rest'),
 				'isWoocommerceActive' => is_plugin_active('woocommerce/woocommerce.php'),
 				'wpVersion'           => $wp_version,
-			)
+			), $sdk)
 		);
 	}
 
