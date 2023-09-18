@@ -55,7 +55,7 @@ class Runtime {
 				'siteUrl'             => \get_site_url(),
 				'siteTitle'           => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 				'restUrl'             => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
-				'restNonce'           => wp_create_nonce('wp-rest'),
+				'restNonce'           => wp_create_nonce('wp_rest'),
 				'isWoocommerceActive' => is_plugin_active('woocommerce/woocommerce.php'),
 				'wpVersion'           => $wp_version,
 			)
