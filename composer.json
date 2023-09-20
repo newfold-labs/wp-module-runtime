@@ -1,5 +1,5 @@
 {
-  "name": "newfold-labs/wp-module-runtime",
+  "name": "newfold-labs/wp-runtime",
   "description": "Runtime for Newfold WP modules and plugins",
   "type": "library",
   "license": [
