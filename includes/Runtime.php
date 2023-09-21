@@ -57,6 +57,7 @@ class Runtime {
 				'restUrl'             => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
 				'restNonce'           => wp_create_nonce('wp_rest'),
 				'isWoocommerceActive' => is_plugin_active('woocommerce/woocommerce.php'),
+				'isJetpackBoostActive'    => is_plugin_active('jetpack-boost/jetpack-boost.php'),
 				'wpVersion'           => $wp_version,
 			)
 		);
