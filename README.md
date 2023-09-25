@@ -3,7 +3,7 @@
 height="42" />
 </a>
 
-# wp-runtime
+# wp-module-runtime
 
 Runtime for Newfold WP modules and plugins
 
@@ -13,10 +13,10 @@ Runtime for Newfold WP modules and plugins
 
 Follow instructions at [GH Packages Setup](https://gist.github.com/aulisius/1a6e4961f17039d82275a6941331b021).
 
-### 2. Install the `@newfold-labs/wp-runtime` npm package.
+### 2. Install the `@newfold-labs/wp-module-runtime` npm package.
 
 ```bash
-npm install @newfold-labs/wp-runtime
+npm install @newfold-labs/wp-module-runtime
 ```
 
 ## PHP Module
@@ -29,10 +29,10 @@ The PHP module can be installed only on the Brand plugin.
 composer config repositories.newfold composer https://newfold.github.io/satis
 ```
 
-### 2. Require the `newfold-labs/wp-runtime` package.
+### 2. Require the `newfold-labs/wp-module-runtime` package.
 
 ```bash
-composer require newfold-labs/wp-runtime
+composer require newfold-labs/wp-module-runtime
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ composer require newfold-labs/wp-runtime
 In your React component you can import the runtime module as so,
 
 ```js
-import { NewfoldRuntime } from "@newfold-labs/wp-runtime";
+import { NewfoldRuntime } from "@newfold-labs/wp-module-runtime";
 
 function Component(props) {
   if (NewfoldRuntime.hasCapability("hasYithExtended")) {
@@ -72,7 +72,7 @@ Now when you use `NewfoldRuntime.sdk.my_field`, you'll see the value as `'custom
 As the runtime can be extended via the `newfold-runtime` filter, you can also configure the type definitions to make sure you safely access the extended values. Since `sdk` is an TS interface, it can be easily extended in the following manner.
 
 ```ts
-declare module "@newfold-labs/wp-runtime" {
+declare module "@newfold-labs/wp-module-runtime" {
   export interface DefaultSdk {
     my_field: string;
   }

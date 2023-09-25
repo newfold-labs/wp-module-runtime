@@ -8,7 +8,7 @@ use function NewfoldLabs\WP\ModuleLoader\register;
 			register(
 				array(
 					'name'     => 'runtime',
-					'label'    => __( 'Runtime', 'wp-runtime' ),
+					'label'    => __( 'Runtime', 'wp-module-runtime' ),
 					'callback' => function ( Container $container ) {
 						$runtime = new Runtime( $container );
 						$runtime->loadIntoPage( 'admin_enqueue_scripts' );
