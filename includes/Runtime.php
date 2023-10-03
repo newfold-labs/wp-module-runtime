@@ -68,9 +68,9 @@ class Runtime {
 	public function register_runtime() {
 		\wp_register_script(
 			'nfd-runtime',
-			$this->container->plugin()->url . 'vendor/newfold-labs/wp-module-runtime/includes/runtime.js',
-			array( 'wp-url' ),
-			'1.0.0'
+			null,
+			null,
+			$wp_version
 		);
 		\wp_add_inline_script(
 			$this->container->plugin()->id . '-script',
