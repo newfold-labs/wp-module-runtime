@@ -73,7 +73,7 @@ class Runtime {
 			$wp_version
 		);
 		\wp_add_inline_script(
-			'newfold_runtime',
+			'nfd-runtime',
 			'window.NewfoldRuntime =' . wp_json_encode( $this->prepareRuntime( $this->container ) ) . ';',
 			'before'
 		);
