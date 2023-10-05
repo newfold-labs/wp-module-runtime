@@ -68,6 +68,7 @@ class Runtime {
 	 * Load Runtime into the page.
 	 */
 	public function register_runtime() {
+		global $wp_version;
 		\wp_register_script(
 			'nfd-runtime',
 			null,
