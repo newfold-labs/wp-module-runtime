@@ -55,7 +55,7 @@ class Runtime {
 				'sdk'                  => $sdk, // TODO: To be removed once no longer in use
 				'siteUrl'              => \get_site_url(),
 				'siteTitle'            => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
-				'restUrl'              => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
+				'restUrl'              => \esc_url_raw( \rest_url() ),
 				'restNonce'            => wp_create_nonce( 'wp_rest' ),
 				'isWoocommerceActive'  => is_plugin_active( 'woocommerce/woocommerce.php' ),
 				'isJetpackBoostActive' => is_plugin_active( 'jetpack-boost/jetpack-boost.php' ),
