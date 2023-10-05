@@ -39,26 +39,27 @@ class Runtime {
 	public function prepareRuntime() {
 		global $wp_version;
 		$sdk = apply_filters( 'newfold-runtime', array( 'wpversion' => $wp_version ) ); // kept for backward compatability, will be removed later
+
 		return apply_filters(
-			'newfold_runtime', 
+			'newfold_runtime',
 			array(
-				'site'                => array(
+				'site'                 => array(
 					'url'   => \get_site_url(),
 					'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 				),
-				'admin_url'           => \admin_url(),
-				'adminUrl'            => \admin_url(),
-				'base_url'            => \get_home_url() . '/index.php',
-				'homeUrl'             => \get_home_url(),
-				'capabilities'        => $this->container->get( 'capabilities' )->all(),
-				'sdk'                 => $sdk, // kept for backward compatability, will be removed later
-				'siteUrl'             => \get_site_url(),
-				'siteTitle'           => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
-				'restUrl'             => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
-				'restNonce'           => wp_create_nonce('wp_rest'),
-				'isWoocommerceActive' => is_plugin_active('woocommerce/woocommerce.php'),
-				'isJetpackBoostActive'    => is_plugin_active('jetpack-boost/jetpack-boost.php'),
-				'wpVersion'           => $wp_version,
+				'admin_url'            => \admin_url(),
+				'adminUrl'             => \admin_url(),
+				'base_url'             => \get_home_url() . '/index.php',
+				'homeUrl'              => \get_home_url(),
+				'capabilities'         => $this->container->get( 'capabilities' )->all(),
+				'sdk'                  => $sdk, // kept for backward compatability, will be removed later
+				'siteUrl'              => \get_site_url(),
+				'siteTitle'            => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
+				'restUrl'              => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
+				'restNonce'            => wp_create_nonce( 'wp_rest' ),
+				'isWoocommerceActive'  => is_plugin_active( 'woocommerce/woocommerce.php' ),
+				'isJetpackBoostActive' => is_plugin_active( 'jetpack-boost/jetpack-boost.php' ),
+				'wpVersion'            => $wp_version,
 			)
 		);
 	}
