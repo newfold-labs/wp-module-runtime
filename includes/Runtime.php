@@ -44,15 +44,15 @@ class Runtime {
 			'newfold_runtime',
 			array(
 				'site'                 => array(
-					'url'   => \get_site_url(),
-					'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
+					'url'   => \get_site_url(), // TODO: To be removed once no longer in use
+					'title' => htmlspecialchars_decode( \get_bloginfo( 'name' ) ), // TODO: To be removed once no longer in use
 				),
-				'admin_url'            => \admin_url(),
+				'admin_url'            => \admin_url(), // TODO: To be removed once no longer in use
 				'adminUrl'             => \admin_url(),
-				'base_url'             => \get_home_url() . '/index.php',
+				'base_url'             => \get_home_url() . '/index.php', // TODO: To be removed once no longer in use
 				'homeUrl'              => \get_home_url(),
 				'capabilities'         => $this->container->get( 'capabilities' )->all(),
-				'sdk'                  => $sdk, // kept for backward compatability, will be removed later
+				'sdk'                  => $sdk, // TODO: To be removed once no longer in use
 				'siteUrl'              => \get_site_url(),
 				'siteTitle'            => htmlspecialchars_decode( \get_bloginfo( 'name' ) ),
 				'restUrl'              => \esc_url_raw( \get_home_url() . '/index.php?rest_route=' ),
