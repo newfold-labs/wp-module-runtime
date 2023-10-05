@@ -67,8 +67,14 @@ class Runtime {
 	 * Load Runtime into the page.
 	 */
 	public function register_runtime() {
+		\wp_register_script(
+			'nfd-runtime',
+			null,
+			null,
+			$wp_version
+		);
 		\wp_add_inline_script(
-			$this->container->plugin()->id . '-script',
+			'nfd-runtime',
 			'window.NewfoldRuntime =' . wp_json_encode( $this->prepareRuntime( $this->container ) ) . ';',
 			'before'
 		);
