@@ -60,6 +60,7 @@ class Runtime {
 				'isWoocommerceActive'  => is_plugin_active( 'woocommerce/woocommerce.php' ),
 				'isJetpackBoostActive' => is_plugin_active( 'jetpack-boost/jetpack-boost.php' ),
 				'wpVersion'            => $wp_version,
+				'isAdmin'			=> is_admin()
 			)
 		);
 	}
