@@ -34,5 +34,8 @@ export const NewfoldRuntime = {
   },
   get siteTitle(){
     return window.NewfoldRuntime?.siteTitle;
+  },
+  get isAdmin(){
+    return window.NewfoldRuntime?.isAdmin;
   }
 };
