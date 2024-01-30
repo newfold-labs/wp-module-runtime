@@ -34,5 +34,8 @@ export const NewfoldRuntime = {
   },
   get siteTitle(){
     return window.NewfoldRuntime?.siteTitle;
+  },
+  get currentTheme(){
+    return window.NewfoldRuntime?.currentTheme;
   }
 };
