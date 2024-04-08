@@ -23,6 +23,9 @@ export const NewfoldRuntime = {
   get isWoo() {
     return window.NewfoldRuntime?.isWoocommerceActive;
   },
+  get isYithBooking() {
+    return window.NewfoldRuntime?.isYithBookingActive;
+  },
   get ecommerce() {
     return window.NewfoldRuntime?.ecommerce;
   },
@@ -32,10 +35,10 @@ export const NewfoldRuntime = {
   get wpversion() {
     return window.NewfoldRuntime?.wpversion;
   },
-  get siteTitle(){
+  get siteTitle() {
     return window.NewfoldRuntime?.siteTitle;
   },
-  get currentTheme(){
+  get currentTheme() {
     return window.NewfoldRuntime?.currentTheme;
   }
 };

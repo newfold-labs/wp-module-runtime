@@ -58,6 +58,7 @@ class Runtime {
 				'restUrl'              => \esc_url_raw( \rest_url() ),
 				'restNonce'            => wp_create_nonce( 'wp_rest' ),
 				'isWoocommerceActive'  => is_plugin_active( 'woocommerce/woocommerce.php' ),
+				'isYithBookingActive'  => is_plugin_active( 'yith-woocommerce-booking-extended/init.php' ) || is_plugin_active( 'yith-woocommerce-booking-premium/init.php' ) || is_plugin_active( 'yith-woocommerce-booking/init.php' ),
 				'isJetpackBoostActive' => is_plugin_active( 'jetpack-boost/jetpack-boost.php' ),
 				'wpVersion'            => $wp_version,
 				'currentTheme'         => wp_get_theme()->get('TextDomain'),
