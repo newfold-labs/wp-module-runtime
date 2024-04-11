@@ -9,7 +9,7 @@ Runtime for Newfold WP modules and plugins
 
 ## Module Responsibilities
 
-#### Runtime class accepts `container` object from brand plugin as parameter and returns a `NewfoldRuntime` object that can used by frontend to fetch meta data of current WordPress site.
+Runtime class accepts `container` object from brand plugin as parameter and returns a `NewfoldRuntime` object that can used by frontend to fetch meta data of current WordPress site.
 ```
 
   {
@@ -100,9 +100,6 @@ Runtime for Newfold WP modules and plugins
 }
 
 ```
-
-
-
 
 ## Installation
 
