@@ -7,6 +7,103 @@ height="42" />
 
 Runtime for Newfold WP modules and plugins
 
+## Module Responsibilities
+
+#### Runtime class accepts `container` object from brand plugin as parameter and returns a `NewfoldRuntime` object that can used by frontend to fetch meta data of current WordPress site.
+```
+
+  {
+    "site": {
+        "url": "Your wordpress site url",
+        "title": "Your wordpress site name"
+    },
+    "adminUrl": "Your wordpress site wp-admin url",
+    "base_url": "Your wordpress site index.php url",
+    "homeUrl": "Your wordpress site url",
+    "capabilities": {
+        "canAccessAI": boolean,
+        "canAccessGlobalCTB": boolean,
+        "canAccessHelpCenter": boolean,
+        "hasEcomdash": boolean,
+        "hasYithExtended": boolean,
+        "isEcommerce": boolean,
+        "isJarvis": boolean
+    },
+    "sdk": {
+        "wpversion": "Current WordPress version",
+        "plugin": {
+            "url": "Brand plugin build url",
+            "version": "Brand plugin version",
+            "assets": "Brand plugin assets url",
+            "brand": "Current WordPress hosting brand name"
+        },
+        "ecommerce": {
+            "brand_settings": {
+                "brand": "Hosting brand value",
+                "name": "Hosting brand name",
+                "url": "Hosting brand page url",
+                "hireExpertsInfo": "Marketplace service purchase url",
+                "support": "Hosting brand support contact url",
+                "adminPage": "Plugin Dashboard Homepage url",
+                "setup": {
+                    "payment": [
+                        Payment options supported for eg: "Paypal", "Razorpay", "Stripe"
+                    ],
+                    "shipping": [
+                        Shipping options supporter for eg: "Shippo"
+                    ]
+                },
+                "defaultContact": {
+                    "woocommerce_default_country": "Default country code",
+                    "woocommerce_currency": "Default currency code"
+                },
+                "wondercartBuyNow": "Marketplace link to purchase WonderCart"
+            },
+            "nonces": {
+                "gateway_toggle": ""gateway_toggle_code"
+            },
+            "install_token": "NFD_INSTALLER_token"
+        }
+    },
+    "siteUrl": "Your wordpress site url",
+    "siteTitle": "Your wordpress site name",
+    "restUrl": "Your wordpress site /wp-json/",
+    "restNonce": "restNonce_value",
+    "isWoocommerceActive": boolean,
+    "isYithBookingActive": boolean,
+    "isJetpackBoostActive": boolean,
+    "wpVersion": "Current WordPress version",
+    "currentTheme": "Current Theme Name",
+    "context": {
+        "platform": "default",
+        "brand": {
+            "name": "Hosting brand name"
+        }
+    },
+    "plugin": {
+            "url": "Brand plugin build url",
+            "version": "Brand plugin version",
+            "assets": "Brand plugin assets url",
+            "brand": "Current WordPress hosting brand name"
+    },
+    "comingSoon": {
+      enable: {
+        success: boolean
+      }  
+      isEnabled: boolean,
+      disabled: {
+        success: boolean
+      }
+      lastChanged: timeStamp when coming soon setting was updated last time
+      toggleAdminBarSiteStatus: null
+    }
+}
+
+```
+
+
+
+
 ## Installation
 
 ### 1. Setup GitHub registry
