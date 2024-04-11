@@ -9,9 +9,9 @@ Runtime for Newfold WP modules and plugins
 
 ## Module Responsibilities
 
-* Runtime class accepts `container` object from brand plugin as parameter and returns a `NewfoldRuntime` object. 
+* Container is loaded from the brand plugin in Runtime class and it returns a `NewfoldRuntime` object. 
 * This object can be imported in any React components as specified in `Usage` section below. 
-* `NewfoldRuntime` provides WordPress site meta data to React components of any newfold-labs modules.
+* Primary respnsibility of `wp-module-runtime` is to return `NewfoldRuntime` object which provides WordPress site meta data to React components of any newfold-labs modules.
 
 
 ```
