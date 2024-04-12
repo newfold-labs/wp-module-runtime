@@ -116,8 +116,8 @@ Runtime for Newfold WP modules and plugins
     7. If WordPress site is migrated to Jarvis
 * Runtime module should provide hosting brand settings information
 * Runtime module must give payment & shipping options available on Ecommerce store as per the geographic location.
-* Runtime module show give `coming soon` status information
-* Runtime module should support addition of custom meta data values as per need under NewfoldRuntime.sdk
+* Runtime module should give  current status information of `coming soon` mode.
+* Runtime module should support addition of custom values as per need under NewfoldRuntime.sdk
 
 ## Installation
 
