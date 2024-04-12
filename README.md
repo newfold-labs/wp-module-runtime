@@ -114,10 +114,10 @@ Runtime for Newfold WP modules and plugins
     5. If WordPress site has any of Yith Extended plugins enabled 
     6. If WordPress site is an Ecommerce store
     7. If WordPress site is migrated to Jarvis
-* Runtime module provides hosting brand settings information
-* Runtime module gives payment & shipping options available on WordPress Ecommerce store
-* Runtime module gives `coming soon` status information
-* Runtime module can be extended by adding custom values under NewfoldRuntime.sdk
+* Runtime module should provide hosting brand settings information
+* Runtime module must give payment & shipping options available on Ecommerce store as per the geographic location.
+* Runtime module show give `coming soon` status information
+* Runtime module should support addition of custom meta data values as per need under NewfoldRuntime.sdk
 
 ## Installation
 
