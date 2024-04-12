@@ -117,7 +117,7 @@ Runtime for Newfold WP modules and plugins
 * Runtime module should provide hosting brand settings information
 * Runtime module must give payment & shipping options available on Ecommerce store as per the geographic location.
 * Runtime module should give  current status information of `coming soon` mode.
-* Runtime module should support addition of custom values as per need under NewfoldRuntime.sdk
+* Runtime module should support addition of custom values as per need under `NewfoldRuntime.sdk` variable.
 
 ## Installation
 
