@@ -103,6 +103,18 @@ Runtime for Newfold WP modules and plugins
 }
 ```
 
+## Critical Paths
+
+* Runtime should provide WordPress site meta data.
+* Runtime module should also provide status of site capabilities like: 
+    1. If WordPress site has access to AI 
+    2. If WordPress site has access to GlobalCTB
+    3. If WordPress site has access to HelpCenter
+    4. If WordPress site has Ecomdash plugin setup
+    5. If WordPress site has Yith Extended plugins setup 
+    6. If WordPress site is an Ecommerce store
+    7. If WordPress site is migrated to Jarvis
+* Runtime module can be extended by adding custom values under NewfoldRuntime.sdk
 
 ## Installation
 
