@@ -9,10 +9,21 @@ Runtime for Newfold WP modules and plugins
 
 ## Module Responsibilities
 
-* Container is loaded from the brand plugin in Runtime class and it returns a `NewfoldRuntime` object. 
-* This object can be imported in any React components as specified in `Usage` section below. 
-* Primary respnsibility of `wp-module-runtime` is to return `NewfoldRuntime` object which provides WordPress site meta data to React components of any newfold-labs modules in below format.
-
+* `prepareRuntime` method in `Runtime` class accepts `container` object as parameter and generates a PHP object which contains:
+      # siteUrl
+      # siteTitle
+      # adminUrl
+      # homeUrl
+      # capabilties  
+      # Woocommerce plugin active/inactive status
+      # YithBooking plugins active/inactive status(yith-woocommerce-booking-extended / yith-woocommerce-booking-premium / yith-woocommerce-booking)
+      # JetpackBoost plugin active/inactive status
+      # WordPress version
+      # currentTheme
+* Above PHP object is then converted into a JSON-encoded string and assigned `NewfoldRuntime` JS variable. 
+* `NewfoldRuntime` JSON object can be imported in any React components in `newfold-labs` modules as specified in `Usage` section below. 
+* Structure of `NewfoldRuntime` JSON object consumed by React components is as below.
+* Please note, `redundant values` are kept for backward compatibility and will be removed soon, as part `tech-debt` initiative.
 
 ```
   {
@@ -105,19 +116,15 @@ Runtime for Newfold WP modules and plugins
 
 ## Critical Paths
 
-* Runtime should provide WordPress site meta data.
-* Runtime module should also provide status of site capabilities like: 
-    1. If WordPress site has access to AI onboarding
-    2. If WordPress site has access to GlobalCTB
-    3. If WordPress site has access to HelpCenter
-    4. If WordPress site has Ecomdash plugin enabled
-    5. If WordPress site has any of Yith Extended plugins enabled 
-    6. If WordPress site is an Ecommerce store
-    7. If WordPress site is migrated to Jarvis
-* Runtime module should provide hosting brand settings information
-* Runtime module must give payment & shipping options available on Ecommerce store as per the geographic location.
-* Runtime module should give  current status information of `coming soon` mode.
-* Runtime module should support addition of custom values as per need under `NewfoldRuntime.sdk` variable.
+* Runtime should provides, 
+    # WordPress site meta data
+    # Site capabilties
+    # WooCommerce & YITH plugin active/inactive status
+    # Brand plugin information 
+    # Ecommerce details like, Payment & Shipping third party softwares supported and Support contact information
+    # WordPress version 
+    # Current WordPress Theme.
+* Runtime module should support addition of custom values as per need.
 
 ## Installation
 
