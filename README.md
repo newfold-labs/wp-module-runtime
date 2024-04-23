@@ -10,6 +10,7 @@ Runtime for Newfold WP modules and plugins
 ## Module Responsibilities
 
 * `prepareRuntime` method in `Runtime` class accepts `container` object as parameter and generates a PHP object which contains:
+      
       ```
           siteUrl
           siteTitle
@@ -22,6 +23,7 @@ Runtime for Newfold WP modules and plugins
           WordPress version
           currentTheme
       ```
+      
 * Above PHP object is then converted into a JSON-encoded string and assigned `NewfoldRuntime` JS variable. 
 * `NewfoldRuntime` JSON object can be imported in any React components in `newfold-labs` modules as specified in `Usage` section below. 
 * Structure of `NewfoldRuntime` JSON object consumed by React components is as below.
