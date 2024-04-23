@@ -11,7 +11,16 @@ Runtime for Newfold WP modules and plugins
 
 * `prepareRuntime` method in `Runtime` class accepts `container` object as parameter and generates a PHP object which contains:
       
-        siteUrl, siteTitle, adminUrl, homeUrl, capabilties, Woocommerce plugin active/inactive status, YithBooking plugins active/inactive status (yith-woocommerce-booking-extended / yith-woocommerce-booking-premium / yith-woocommerce-booking), JetpackBoost plugin active/inactive status, WordPress version, currentTheme.
+        siteUrl, 
+        siteTitle, 
+        adminUrl, 
+        homeUrl, 
+        capabilties, 
+        Woocommerce plugin active/inactive status, 
+        YithBooking plugins active/inactive status(yith-woocommerce-booking-extended / yith-woocommerce-booking-premium / yith-woocommerce-booking), 
+        JetpackBoost plugin active/inactive status, 
+        WordPress version, 
+        currentTheme.
       
 * Above PHP object is then converted into a JSON-encoded string and assigned `NewfoldRuntime` JS variable. 
 * `NewfoldRuntime` JSON object can be imported in any React components in `newfold-labs` modules as specified in `Usage` section below. 
