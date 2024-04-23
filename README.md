@@ -3,9 +3,130 @@
 height="42" />
 </a>
 
-# wp-module-runtime
+# WordPress Runtime Module
 
 Runtime for Newfold WP modules and plugins
+
+## Module Responsibilities
+
+* `prepareRuntime` method in `Runtime` class accepts `container` object as parameter and generates a PHP object which contains:
+      
+        siteUrl, 
+        siteTitle, 
+        adminUrl, 
+        homeUrl, 
+        capabilties, 
+        Woocommerce plugin active/inactive status, 
+        YithBooking plugins active/inactive status(yith-woocommerce-booking-extended / yith-woocommerce-booking-premium / yith-woocommerce-booking), 
+        JetpackBoost plugin active/inactive status, 
+        WordPress version, 
+        currentTheme.
+      
+* Above PHP object is then converted into a JSON-encoded string and assigned `NewfoldRuntime` JS variable. 
+* `NewfoldRuntime` JSON object can be imported in any React components in `newfold-labs` modules as specified in `Usage` section below. 
+* Structure of `NewfoldRuntime` JSON object consumed by React components is as below.
+* Please note, `redundant values` are kept for backward compatibility and will be removed soon, as part `tech-debt` initiative.
+
+```
+  {
+    "site": {
+        "url": "Your wordpress site url",
+        "title": "Your wordpress site name"
+    },
+    "adminUrl": "Your wordpress site wp-admin url",
+    "base_url": "Your wordpress site index.php url",
+    "homeUrl": "Your wordpress site url",
+    "capabilities": {
+        "canAccessAI": boolean,
+        "canAccessGlobalCTB": boolean,
+        "canAccessHelpCenter": boolean,
+        "hasEcomdash": boolean,
+        "hasYithExtended": boolean,
+        "isEcommerce": boolean,
+        "isJarvis": boolean
+    },
+    "sdk": {
+        "wpversion": "Current WordPress version",
+        "plugin": {
+            "url": "Brand plugin build url",
+            "version": "Brand plugin version",
+            "assets": "Brand plugin assets url",
+            "brand": "Current WordPress hosting brand name"
+        },
+        "ecommerce": {
+            "brand_settings": {
+                "brand": "Hosting brand value",
+                "name": "Hosting brand name",
+                "url": "Hosting brand page url",
+                "hireExpertsInfo": "Marketplace service purchase url",
+                "support": "Hosting brand support contact url",
+                "adminPage": "Plugin Dashboard Homepage url",
+                "setup": {
+                    "payment": [
+                        Payment options supported for eg: "Paypal", "Razorpay", "Stripe"
+                    ],
+                    "shipping": [
+                        Shipping options supporter for eg: "Shippo"
+                    ]
+                },
+                "defaultContact": {
+                    "woocommerce_default_country": "Default country code",
+                    "woocommerce_currency": "Default currency code"
+                },
+                "wondercartBuyNow": "Marketplace link to purchase WonderCart"
+            },
+            "nonces": {
+                "gateway_toggle": ""gateway_toggle_code"
+            },
+            "install_token": "NFD_INSTALLER_token"
+        }
+    },
+    "siteUrl": "Your wordpress site url",
+    "siteTitle": "Your wordpress site name",
+    "restUrl": "Your wordpress site /wp-json/",
+    "restNonce": "restNonce_value",
+    "isWoocommerceActive": boolean,
+    "isYithBookingActive": boolean,
+    "isJetpackBoostActive": boolean,
+    "wpVersion": "Current WordPress version",
+    "currentTheme": "Current Theme Name",
+    "context": {
+        "platform": "default",
+        "brand": {
+            "name": "Hosting brand name"
+        }
+    },
+    "plugin": {
+            "url": "Brand plugin build url",
+            "version": "Brand plugin version",
+            "assets": "Brand plugin assets url",
+            "brand": "Current WordPress hosting brand name"
+    },
+    "comingSoon": {
+      enable: {
+        success: boolean
+      }  
+      isEnabled: boolean,
+      disabled: {
+        success: boolean
+      }
+      lastChanged: timeStamp when coming soon setting was updated last time
+      toggleAdminBarSiteStatus: null
+    }
+}
+```
+
+## Critical Paths
+
+* Runtime should provides, 
+    1. WordPress site meta data
+    2. Site capabilties
+    3. WooCommerce & YITH plugin active/inactive status
+    4. Brand plugin information 
+    5. Ecommerce details like, Payment & Shipping third party softwares supported and Support contact information
+    6. WordPress version 
+    7. Current WordPress Theme.
+* Runtime module should support addition of custom values as per need.
 
 ## Installation
 
