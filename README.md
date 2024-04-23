@@ -3,7 +3,7 @@
 height="42" />
 </a>
 
-# wp-module-runtime
+# WordPress Runtime Module
 
 Runtime for Newfold WP modules and plugins
 
@@ -117,13 +117,13 @@ Runtime for Newfold WP modules and plugins
 ## Critical Paths
 
 * Runtime should provides, 
-    # WordPress site meta data
-    # Site capabilties
-    # WooCommerce & YITH plugin active/inactive status
-    # Brand plugin information 
-    # Ecommerce details like, Payment & Shipping third party softwares supported and Support contact information
-    # WordPress version 
-    # Current WordPress Theme.
+    1. WordPress site meta data
+    2. Site capabilties
+    3. WooCommerce & YITH plugin active/inactive status
+    4. Brand plugin information 
+    5. Ecommerce details like, Payment & Shipping third party softwares supported and Support contact information
+    6. WordPress version 
+    7. Current WordPress Theme.
 * Runtime module should support addition of custom values as per need.
 
 ## Installation
