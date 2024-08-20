@@ -202,4 +202,4 @@ declare module "@newfold-labs/wp-module-runtime" {
 
 Now when you use `NewfoldRuntime.sdk`, your editor should give you the correct type hints.
 
-[More on NewFold WordPress Modules](https://github.com/newfold-labs/wp-module-loader)
+[More on Newfold WordPress Modules](https://github.com/newfold-labs/wp-module-loader)
