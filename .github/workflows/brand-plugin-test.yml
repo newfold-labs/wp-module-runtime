@@ -53,3 +53,23 @@ jobs:
       module-branch: ${{ needs.setup.outputs.branch }}
       plugin-repo: 'newfold-labs/wp-plugin-crazy-domains'
     secrets: inherit
+
+  web:
+    name: Web Build and Test
+    needs: setup
+    uses: newfold-labs/workflows/.github/workflows/module-plugin-test.yml@main
+    with:
+      module-repo: ${{ github.repository }}
+      module-branch: ${{ needs.setup.outputs.branch }}
+      plugin-repo: 'newfold-labs/wp-plugin-web'
+    secrets: inherit
+
+  crazydomains:
+    name: Mojo Build and Test
+    needs: setup
+    uses: newfold-labs/workflows/.github/workflows/module-plugin-test.yml@main
+    with:
+      module-repo: ${{ github.repository }}
+      module-branch: ${{ needs.setup.outputs.branch }}
+      plugin-repo: 'newfold-labs/wp-plugin-mojo'
+    secrets: inherit
