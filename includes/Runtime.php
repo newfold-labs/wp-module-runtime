@@ -73,7 +73,7 @@ class Runtime {
 		global $wp_version;
 		\wp_register_script(
 			'nfd-runtime',
-			'',
+			false,
 			null,
 			$wp_version
 		);
