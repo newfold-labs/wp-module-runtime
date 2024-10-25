@@ -64,7 +64,7 @@ jobs:
       plugin-repo: 'newfold-labs/wp-plugin-web'
     secrets: inherit
 
-  crazydomains:
+  mojo:
     name: Mojo Build and Test
     needs: setup
     uses: newfold-labs/workflows/.github/workflows/module-plugin-test.yml@main
