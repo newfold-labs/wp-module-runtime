@@ -1,5 +1,5 @@
 {
-  "name": "@newfold-labs/wp-module-runtime",
+  "name": "@newfold/wp-module-runtime",
   "description": "Runtime for Newfold WP modules and plugins",
   "license": "GPL-2.0-or-later",
   "version": "1.0.12",
