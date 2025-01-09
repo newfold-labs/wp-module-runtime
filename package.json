@@ -21,6 +21,6 @@
     "@wordpress/url": "4.10.0"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^27.9.0"
+    "@wordpress/scripts": "^30.8.1"
   }
 }
