@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1756997622">
-  <project timestamp="1756997622">
+<coverage generated="1756997642">
+  <project timestamp="1756997642">
     <file name="/home/runner/work/wp-module-runtime/wp-module-runtime/includes/Runtime.php">
       <class name="NewfoldLabs\WP\Module\Runtime\Runtime" namespace="global">
         <metrics complexity="6" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="0" elements="44" coveredelements="0"/>
