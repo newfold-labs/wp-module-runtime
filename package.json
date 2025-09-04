@@ -21,7 +21,7 @@
     "test:e2e": "echo \"No tests implemented\""
   },
   "dependencies": {
-    "@wordpress/url": "4.26.0"
+    "@wordpress/url": "4.30.0"
   },
   "devDependencies": {
     "@wordpress/env": "^10.26.0",
