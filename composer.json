@@ -22,6 +22,10 @@
   "repositories": [
     {
       "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
       "url": "https://newfold-labs.github.io/satis/",
       "only": [
         "newfold-labs/*"
@@ -67,7 +71,8 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "composer/installers": true,
-      "johnpbloch/wordpress-core-installer": true
+      "johnpbloch/wordpress-core-installer": true,
+      "kylekatarnls/update-helper": true
     }
   }
 }
