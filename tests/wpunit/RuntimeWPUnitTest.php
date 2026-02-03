@@ -18,6 +18,7 @@ class RuntimeWPUnitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 	 * @return Container
 	 */
 	private function create_container_mock( array $capabilities = array() ) {
+		// phpcs:disable Squiz.Commenting.VariableComment.Missing, Squiz.Commenting.FunctionComment.Missing -- anonymous class for test double
 		$capabilities_obj = new class( $capabilities ) {
 			private $caps;
 			public function __construct( array $caps ) {
@@ -27,7 +28,8 @@ class RuntimeWPUnitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 				return $this->caps;
 			}
 		};
-		$container = $this->createMock( Container::class );
+		// phpcs:enable Squiz.Commenting.VariableComment.Missing, Squiz.Commenting.FunctionComment.Missing
+		$container        = $this->createMock( Container::class );
 		$container->method( 'get' )->with( 'capabilities' )->willReturn( $capabilities_obj );
 		return $container;
 	}
@@ -97,8 +99,8 @@ class RuntimeWPUnitTest extends \lucatume\WPBrowser\TestCase\WPTestCase {
 		$container = $this->create_container_mock();
 		$runtime   = new Runtime( $container );
 		$runtime->register_runtime();
+		$this->assertTrue( wp_script_is( 'nfd-runtime', 'registered' ) );
 		global $wp_scripts;
-		$this->assertNotNull( $wp_scripts->get( 'nfd-runtime' ) );
 		$inline = $wp_scripts->get_inline_script_data( 'nfd-runtime', 'before' );
 		$this->assertStringContainsString( 'window.NewfoldRuntime', $inline );
 	}
