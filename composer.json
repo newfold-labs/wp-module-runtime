@@ -1,82 +1,78 @@
 {
-    "name": "newfold-labs/wp-module-runtime",
-    "description": "Runtime for Newfold WP modules and plugins",
-    "type": "library",
-    "license": [
-        "GPL-2.0-or-later"
-    ],
-    "authors": [
-        {
-            "name": "Beyond",
-            "email": "team-spartans@newfold.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "NewfoldLabs\\WP\\Module\\Runtime\\": "includes"
-        },
-        "files": [
-            "bootstrap.php"
-        ]
-    },
-    "repositories": {
-        "outlandishideas/wpackagist": {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        },
-        "0": {
-            "type": "composer",
-            "url": "https://newfold-labs.github.io/satis/",
-            "only": [
-                "newfold-labs/*"
-            ]
-        }
-    },
-    "require-dev": {
-        "johnpbloch/wordpress": "@stable",
-        "lucatume/wp-browser": "*",
-        "newfold-labs/wp-php-standards": "@stable",
-        "phpunit/phpcov": "*",
-        "wp-cli/i18n-command": "@stable",
-        "wp-cli/wp-cli-bundle": "@stable"
-    },
-    "scripts": {
-        "fix": [
-            "vendor/bin/phpcbf --standard=phpcs.xml ."
-        ],
-        "lint": [
-            "vendor/bin/phpcs --standard=phpcs.xml -s ."
-        ],
-        "test": [
-            "codecept run wpunit"
-        ],
-        "test-coverage": [
-            "codecept run wpunit --coverage wpunit.cov",
-            "phpcov merge --php tests/_output/merged.cov --html tests/_output/html tests/_output;",
-            "echo \"open tests/_output/html/index.html\" to view the report"
-        ]
-    },
-    "scripts-descriptions": {
-        "fix": "Automatically fix coding standards issues where possible.",
-        "lint": "Check files against coding standards.",
-        "test": "Run tests.",
-        "test-coverage": "Run tests with coverage, merge coverage and create HTML report."
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true,
-        "platform": {
-            "php": "7.3"
-        },
-        "preferred-install": {
-            "newfold-labs/*": "source",
-            "*": "dist"
-        },
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "composer/installers": true,
-            "johnpbloch/wordpress-core-installer": true,
-            "kylekatarnls/update-helper": true
-        }
+  "name": "newfold-labs/wp-module-runtime",
+  "description": "Runtime for Newfold WP modules and plugins",
+  "type": "library",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "authors": [
+    {
+      "name": "Beyond",
+      "email": "team-spartans@newfold.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "NewfoldLabs\\WP\\Module\\Runtime\\": "includes"
+    },
+    "files": [
+      "bootstrap.php"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://newfold-labs.github.io/satis/",
+      "only": [
+        "newfold-labs/*"
+      ]
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "newfold-labs/wp-php-standards": "@stable",
+    "newfold-labs/wp-module-loader": "^1.0",
+    "wp-cli/wp-cli-bundle": "@stable",
+    "wp-cli/i18n-command": "@stable",
+    "johnpbloch/wordpress": "@stable",
+    "lucatume/wp-browser": "*",
+    "phpunit/phpcov": "*"
+  },
+  "scripts": {
+    "fix": [
+      "vendor/bin/phpcbf --standard=phpcs.xml ."
+    ],
+    "lint": [
+      "vendor/bin/phpcs --standard=phpcs.xml -s ."
+    ],
+    "test": "codecept run wpunit",
+    "test-coverage": "codecept run wpunit --coverage wpunit.cov && phpcov merge --php tests/_output/merged.cov --html tests/_output/html tests/_output && echo \"open tests/_output/html/index.html to view the report\""
+  },
+  "scripts-descriptions": {
+    "fix": "Automatically fix coding standards issues where possible.",
+    "lint": "Check files against coding standards.",
+    "test": "Run wpunit tests.",
+    "test-coverage": "Run wpunit tests with coverage."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4.33"
+    },
+    "preferred-install": {
+      "newfold-labs/*": "source",
+      "*": "dist"
+    },
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "kylekatarnls/update-helper": true
+    }
+  }
 }
