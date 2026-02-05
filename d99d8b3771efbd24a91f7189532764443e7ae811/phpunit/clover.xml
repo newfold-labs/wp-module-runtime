@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1770305328">
+  <project timestamp="1770305328">
+    <file name="/home/runner/work/wp-module-runtime/wp-module-runtime/bootstrap.php">
+      <line num="9" type="stmt" count="0"/>
+      <line num="10" type="stmt" count="0"/>
+      <line num="11" type="stmt" count="0"/>
+      <line num="12" type="stmt" count="0"/>
+      <line num="13" type="stmt" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <metrics loc="18" ncloc="18" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/home/runner/work/wp-module-runtime/wp-module-runtime/includes/Runtime.php">
+      <class name="NewfoldLabs\WP\Module\Runtime\Runtime" namespace="global">
+        <metrics complexity="6" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="44" coveredelements="44"/>
+      </class>
+      <line num="31" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+      <line num="32" type="stmt" count="4"/>
+      <line num="35" type="method" name="loadIntoPage" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="36" type="stmt" count="1"/>
+      <line num="39" type="method" name="prepareRuntime" visibility="public" complexity="3" crap="3" count="3"/>
+      <line num="40" type="stmt" count="3"/>
+      <line num="41" type="stmt" count="3"/>
+      <line num="43" type="stmt" count="3"/>
+      <line num="44" type="stmt" count="3"/>
+      <line num="45" type="stmt" count="3"/>
+      <line num="46" type="stmt" count="3"/>
+      <line num="47" type="stmt" count="3"/>
+      <line num="48" type="stmt" count="3"/>
+      <line num="49" type="stmt" count="3"/>
+      <line num="50" type="stmt" count="3"/>
+      <line num="51" type="stmt" count="3"/>
+      <line num="52" type="stmt" count="3"/>
+      <line num="53" type="stmt" count="3"/>
+      <line num="54" type="stmt" count="3"/>
+      <line num="55" type="stmt" count="3"/>
+      <line num="56" type="stmt" count="3"/>
+      <line num="57" type="stmt" count="3"/>
+      <line num="58" type="stmt" count="3"/>
+      <line num="59" type="stmt" count="3"/>
+      <line num="60" type="stmt" count="3"/>
+      <line num="61" type="stmt" count="3"/>
+      <line num="62" type="stmt" count="3"/>
+      <line num="63" type="stmt" count="3"/>
+      <line num="64" type="stmt" count="3"/>
+      <line num="65" type="stmt" count="3"/>
+      <line num="66" type="stmt" count="3"/>
+      <line num="72" type="method" name="register_runtime" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="73" type="stmt" count="1"/>
+      <line num="74" type="stmt" count="1"/>
+      <line num="75" type="stmt" count="1"/>
+      <line num="76" type="stmt" count="1"/>
+      <line num="77" type="stmt" count="1"/>
+      <line num="78" type="stmt" count="1"/>
+      <line num="79" type="stmt" count="1"/>
+      <line num="80" type="stmt" count="1"/>
+      <line num="81" type="stmt" count="1"/>
+      <line num="82" type="stmt" count="1"/>
+      <line num="83" type="stmt" count="1"/>
+      <line num="84" type="stmt" count="1"/>
+      <metrics loc="88" ncloc="60" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="40" coveredstatements="40" elements="44" coveredelements="44"/>
+    </file>
+    <metrics files="2" loc="106" ncloc="78" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="40" elements="51" coveredelements="44"/>
+  </project>
+</coverage>
