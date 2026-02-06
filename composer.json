@@ -35,7 +35,7 @@
   "require": {},
   "require-dev": {
     "newfold-labs/wp-php-standards": "@stable",
-    "newfold-labs/wp-module-loader": "^1.0",
+    "newfold-labs/wp-module-loader": "^1.1",
     "wp-cli/wp-cli-bundle": "@stable",
     "wp-cli/i18n-command": "@stable",
     "johnpbloch/wordpress": "@stable",
