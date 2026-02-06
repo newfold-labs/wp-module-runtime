@@ -1,5 +1,8 @@
 {
   "name": "@newfold/wp-module-runtime",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Runtime for Newfold WP modules and plugins",
   "license": "GPL-2.0-or-later",
   "version": "1.2.0",
