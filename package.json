@@ -5,7 +5,7 @@
   },
   "description": "Runtime for Newfold WP modules and plugins",
   "license": "GPL-2.0-or-later",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "engines": {
     "node": ">=22.11.0",
     "npm": ">=10.9.0"
