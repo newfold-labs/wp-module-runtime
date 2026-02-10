@@ -3,6 +3,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newfold-labs/wp-module-runtime.git"
+  },
   "description": "Runtime for Newfold WP modules and plugins",
   "license": "GPL-2.0-or-later",
   "version": "1.2.1",
