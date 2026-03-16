@@ -11,6 +11,7 @@ Documentation for wp-module-runtime, for **humans** and **AI agents**. Start her
 | [integration.md](integration.md) | How the runtime is built, the filter, and what the host must provide. |
 | [development.md](development.md) | Lint, test, and day-to-day workflow. |
 | [dependencies.md](dependencies.md) | Runtime expectations (container, capabilities) and dev dependencies. |
+| [release.md](release.md) | Release process: use the Newfold Prepare Release workflow. |
 
 ## Quick links
 
