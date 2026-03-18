@@ -1,3 +1,10 @@
+---
+name: wp-module-runtime
+title: Documentation index
+description: Table of contents and quick links.
+updated: 2025-03-18
+---
+
 # wp-module-runtime – Documentation index
 
 Documentation for wp-module-runtime, for **humans** and **AI agents**. Start here.
