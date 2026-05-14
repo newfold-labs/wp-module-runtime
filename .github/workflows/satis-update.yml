@@ -12,6 +12,7 @@ jobs:
     name: Send Webhook
     runs-on: ubuntu-latest
     permissions: {} # No default token scopes needed; repository dispatch uses WEBHOOK_TOKEN.
+    timeout-minutes: 30
     steps:
 
       - name: Set Package
